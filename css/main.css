@@ -1,59 +1,103 @@
-/*
-Arduboy Web-based bitmap editor
-
-Copyright (c) 2016 emutyworks
-
-Released under the MIT license
-https://github.com/emutyworks/BitmapEditor/blob/master/LICENSE.txt
-*/
 body, input, select {
   font-family: helvetica, arial, sans-serif;
   font-size: 9pt;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
   cursor: default;
-  }
-.mono {
-	font-family: monospace;
-	font-size: 10pt;
 }
+
+.mono {
+  font-family: monospace;
+  font-size: 10pt;
+}
+
 #memo {
-	width: 380px;
-	}
+  width: 380px;
+}
+
 #min_w, #min_h {
-	width: 30px;
-	}
+  width: 30px;
+}
+
 #edit_view {
-	position: relative;
-	left: 0px;
-	top: 5px;
-	}
+  position: relative;
+  left: 0;
+  top: 5px;
+}
+
 #edit_mes {
-	background-color:#ffff00;
-	}
+  background-color: #ffff00;
+}
+
 #edit_menu {
-	position: absolute;
+  position: absolute;
   z-index: 2;
-  }
+}
+
 #editor {
-	position: absolute;
-	z-index: 0;
-	left: 0px;
-	top: 0px;
-  }
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 0;
+}
+
 #cursor {
-	position: absolute;
-	z-index: 1;
-	left: 0px;
-	top: 0px;
-  }
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+
 #hx {
-	visibility: visible;
-	position: absolute;
-	z-index: 1;
-	left: 0px;
-  }
+  visibility: visible;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+}
+
 #pixel_x {
   width: 30px;
-  }
+}
+
+/* ----------------------------- */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+.wrapper {
+	height: 100vh;
+	width: 100vw;
+	background: #333;
+	border: 6px solid #666;
+	display: flex;
+}
+
+.pane {
+	padding: 1em;
+	color: #fff;
+	min-width: 200px;
+}
+
+.left {
+
+}
+
+.right {
+	position: relative;
+}
+
+.gutter {
+	width: 10px;
+	height: 100%;
+	background: #666;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: col-resize;
+}
+
 
 
